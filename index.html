@@ -5,18 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ThemeSwitcher</title>
     <style>
-      
+      body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2782e3;
+    font-size: 15px; 
+    padding: 0;
+    margin: 0;
+}    
+.container{
+    width: 550px;
+    height: 470px;
+    background-color:  #f5ebeb;
+    margin: 10px auto;
+    border-radius:20px ;
+}
+.heading-container{
+    width: 550px;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+  .heading{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px;
+  } 
+  .title{
+    margin-top: 6px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: #2782e3;
+  }
+  .text-box{
+    width: 130px;
+    height: 30px;
+    color:navy ;
+    font-weight: 700;
+    margin-left: 200px;
+    border: 3px solid #2782e3 ;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px grey ;
+    text-align: center;
+  }
+  .submit{
+    display: block;
+    margin: 20px auto;
+    width: 90px;
+    height:30px ;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-color: navy;
+    background-color:#003669;
+    
+  }
+  .age-ans{
+    text-align: center;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+  color:navy;
+  }
 .theme-selector-container {
+  display: flex;
+  flex-direction: row;
         position: fixed;
         right: 15px;
         top: 15px;
+        
+      }
+      .img-box{
+        width: 40px;
+        padding-left: 5px;
+        margin-left: 3px;
+        border: #f5ebeb;
+        background-color: white ;
+        border-radius: 5px;
       }
       .theme-select-icon {
         width: 30px;
         margin-right: 10px;
       }
       .bg-light{
-        background-color: #2782e3;
+        background-color: #7eace0;
       }
       .bg-dark{
         background-color: black;
@@ -41,20 +114,20 @@
                 <p class="title">Year</p>
                     <input type="text" name="year"   id="year"placeholder="yyyy" class="text-box"/>
                     <input type="button" name="submit"   value="Submit" onclick="age()" class="submit"/>
-            <div id="age"></div>
+            <p class="age-ans" id="age"></p>
         </form>
     </div>
     <div class="theme-selector-container">
-      <img
+      <div class="img-box"><img
         src="brightness.png"
         class="theme-select-icon"
         onclick="enableLight()"
-      />
-      <img
+      /></div>
+      <div class="img-box"><img
         src="night-mode.png"
         class="theme-select-icon"
         onclick="enableDark()"
-      />
+      /></div>
     </div>
     <script>
        function age() {
