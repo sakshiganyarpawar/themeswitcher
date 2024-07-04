@@ -94,19 +94,19 @@
       .bg-dark{
         background-color: black;
       }
-      .title-light{
-        color: blueviolet;
-      }
-      .title-dark{
-        color: whitesmoke;
-      }
+      .heading-dark{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color:#2782e3;
+  } 
      
     </style>
   </head>
   <body class="bg-light" id="main-body">
     <div class="container">
         <form>
-               <div class="heading-container"><h4 class="heading">Age Calculator</h4> </div>
+               <div class="heading-container"><h4 class="heading" id="heading">Age Calculator</h4> </div>
                 <p class="title">Date</p>
                     <input type="text" name="date" id="date" placeholder="dd" class="text-box"/>
                 <p class="title">Month</p>
@@ -158,18 +158,18 @@
         mainBody.classList.remove("bg-light")
         mainBody.classList.add("bg-dark")
 
-      const Title=document.getElementById("title")
-      Title.classList.remove("title-light")
-      Title.classList.add("title-dark")
+      const Heading=document.getElementById("heading")
+     Heading.classList.remove("heading")
+     Heading.classList.add("heading-dark")
       }
       function enableLight(){
         const mainBody=document.getElementById("main-body");
         mainBody.classList.remove("bg-dark")
         mainBody.classList.add("bg-light")
      
-      const Title=document.getElementById("title")
-      Title.classList.remove("title-dark")
-      Title.classList.add("title-light")
+      const Heading=document.getElementById("heading")
+      Heading.classList.remove("heading-dark")
+      Heading.classList.add("heading")
     }
     </script>
   </body>
